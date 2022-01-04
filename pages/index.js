@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import AddTask from '../components/AddTask';
-import TaskList from '../components/TaskList';
-import { TasksProvider } from '../components/TasksContext';
+import Head from "next/head";
+import AddTask from "../components/AddTask";
+import TaskList from "../components/TaskList";
+import { TasksProvider } from "../components/TasksContext";
 
 export default function Home() {
   return (
@@ -12,10 +12,14 @@ export default function Home() {
         <link rel="icon" href="/fav.png" />
       </Head>
       <TasksProvider>
-      <h1>Day off in Kyoto</h1>
-      <AddTask />
-      <TaskList />
-    </TasksProvider>
+        <div className="flex w-100">
+        <div className="m-auto">
+          <h1 className="w-80">Day off in Kyoto</h1>
+          <AddTask className="w-80"></AddTask>
+          <TaskList className="w-100"></TaskList>
+          </div>
+        </div>
+      </TasksProvider>
     </div>
-  )
+  );
 }

@@ -23,7 +23,8 @@ function Task({ task }) {
   if (isEditing) {
     taskContent = (
       <>
-        <input
+        <input 
+        className="border-2 border-gray-500 p-2 w-30"
           value={task.text}
           onChange={(e) => {
             dispatch({
